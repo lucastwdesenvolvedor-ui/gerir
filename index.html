@@ -51,10 +51,13 @@
     </script>
     <meta name="google-site-verification" content="lHYV4sfplhueZujw12paLG7TjPgRQKdIarIjZ7N10NQ" />
     <link rel="stylesheet" href="styles.css">
-    <script>
-  // substitua "lucas-gerir" por algo único para o seu site
-  const namespace = '001';
-  fetch(`https://api.countapi.xyz/hit/${namespace}/visitas`);
+<script>
+fetch('https://api.getcount.app/hit/meusite/contador')
+  .then(res => res.json())
+  .then(data => {
+    console.log('Total de acessos:', data.count);
+  })
+  .catch(err => console.error('Erro ao registrar visita:', err));
 </script>
 
 </head>
@@ -124,5 +127,6 @@
 
 
 </html>
+
 
 
